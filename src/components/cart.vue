@@ -34,18 +34,22 @@ computed:{
   var total = 0;
   var item1;
   // var testPrice;
-  var singelPrice;
+  // var singelPrice;
   this.items.forEach(item => {
   item1 = JSON.parse(JSON.stringify(item)),
-  singelPrice = item1.Price.split('$'),
-  total += parseFloat(item1.Price)
+  // singelPrice = item1.Price.split('$'),
+  total += parseFloat(item.Price)
   });
-  console.log(singelPrice);
+  // console.log(singelPrice);
   return total
 }
 },
 methods: {
-
+  split() {
+    var singelPrice;
+    singelPrice = item1.Price.split('$')
+    console.log(singelPrice);
+  }
 }
 }
 
