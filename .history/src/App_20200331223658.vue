@@ -12,7 +12,7 @@
 </div>
 
   <div class="col-md-3">
-    <cart @removedItem="removeItem" :items="cart" ></cart>
+    <cart :items="cart" ></cart>
   </div>
 </div>
 </div>
@@ -35,7 +35,13 @@ components:{
 data(){
   return{
 items:[],
-cart:[]
+cart:[{
+  id:1,
+  title:'',
+  Price:'',
+  photo:"http://dummyimage.com/250x250.png/cc0000/ffffff"
+
+}]
   }
 
 },
@@ -46,9 +52,6 @@ this.items = data;
 methods:{
   addItem(item){
     this.cart.push(item)
-  },
-  removeItem(index){
-    this.cart.splice(index, 1)
   }
 }
 }

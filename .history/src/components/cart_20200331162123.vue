@@ -8,7 +8,7 @@
       <hr/>
       <li class="list-group-item" v-for="(item, index) in items" :key="index">
         <span class="item-name">{{ item.title }}</span>
-        <span class="item-name float-right">{{ item.Price }}</span><button class="BtnRemoved" @click="removedItem(index)">Removed</button>
+        <span class="item-name float-right">{{ item.Price }}</span>
       </li>
       <hr/>
       <li class="list-group-item">
@@ -48,15 +48,8 @@ totalPrice() {
       });
       return total;
     }
-
-},
-methods:{
-  removedItem(index){
-    this.$emit('removedItem', index)
-  }
-  }
 }
-
+}
 // totalPrice(){
 //     var total = 0
 //     this.items.forEach(item => {
@@ -68,9 +61,5 @@ methods:{
 </script>
 
 <style>
-button.BtnRemoved {
-    /* margin-left: 238px; */
-    float: right;
-    margin-right: -153px;
-}
+
 </style>

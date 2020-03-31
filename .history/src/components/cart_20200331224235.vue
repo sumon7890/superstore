@@ -52,11 +52,11 @@ totalPrice() {
 },
 methods:{
   removedItem(index){
-    this.$emit('removedItem', index)
+    this.$emit('removedItem', item)
   }
   }
 }
-
+}
 // totalPrice(){
 //     var total = 0
 //     this.items.forEach(item => {

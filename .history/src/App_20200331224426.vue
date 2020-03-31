@@ -48,7 +48,7 @@ methods:{
     this.cart.push(item)
   },
   removeItem(index){
-    this.cart.splice(index, 1)
+    this.remove.splice(index)
   }
 }
 }

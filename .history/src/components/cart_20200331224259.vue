@@ -52,7 +52,7 @@ totalPrice() {
 },
 methods:{
   removedItem(index){
-    this.$emit('removedItem', index)
+    this.$emit('removedItem', item)
   }
   }
 }
