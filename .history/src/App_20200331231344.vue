@@ -1,7 +1,7 @@
 <template>
 <div id="app">
 
-<navber @surch="surch"></navber>
+<navber @surach="surch"></navber>
 
 <div class="container">
 <div class="row">
@@ -44,8 +44,8 @@ this.items = data;
 
 },
 methods:{
-  surch(keyword){
-    this.items = data.filter(item => {
+  surach(keyword){
+    this.items.data.filter(item => {
      return item.title.toLowerCase().indexOf(keyword.toLowerCase()) !== -1
     })
   },

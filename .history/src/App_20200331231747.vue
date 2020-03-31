@@ -45,7 +45,7 @@ this.items = data;
 },
 methods:{
   surch(keyword){
-    this.items = data.filter(item => {
+    this.items.data.filter(item => {
      return item.title.toLowerCase().indexOf(keyword.toLowerCase()) !== -1
     })
   },

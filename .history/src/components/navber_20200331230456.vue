@@ -25,14 +25,14 @@
 
 
 export default {
-  data(){
-    return {
-      keyword: '',
+  data:{
+    return: {
+      keyword: ''
     }
   },
 methods:{
   surch(){
-    this.$emit('surch', this.keyword)
+    this.$$emit('surch', this.keyword)
   }
 }
 }

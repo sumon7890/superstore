@@ -25,9 +25,9 @@
 
 
 export default {
-  data(){
-    return {
-      keyword: '',
+  data:{
+    return: {
+      keyword: ''
     }
   },
 methods:{
