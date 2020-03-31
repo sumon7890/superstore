@@ -6,13 +6,13 @@
 <div class="container">
 <div class="row">
   <div class="col-md-9">
- <inventory :items='items'></inventory>
+ <inventory @newItemAdded="addItem" :items="items"></inventory>
 
 
 </div>
 
   <div class="col-md-3">
-    <cart></cart>
+    <cart :items="cart" ></cart>
   </div>
 </div>
 </div>
@@ -33,11 +33,26 @@ components:{
   cart
 },
 data(){
-  items:[]
+  return{
+items:[],
+cart:[{
+  id:1,
+  title:'test',
+  Price:0,
+  photo:"http://dummyimage.com/250x250.png/cc0000/ffffff"
+
+}]
+  }
+
 },
 mounted(){
-this.items = data
-console.log(data);
+this.items = data;
+
+},
+methods:{
+  addItem(item){
+    this.cart.push(item)
+  }
 }
 }
 </script>
@@ -47,4 +62,4 @@ console.log(data);
   padding: 10px;
 }
 </style>
-// ami jison dia akta online thake data created korci setai input korte partaci na data show korbe inventory vitore
+
